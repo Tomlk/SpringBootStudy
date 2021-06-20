@@ -1,0 +1,71 @@
+##k=v
+#
+##普通的keyvalue
+#name: qinjiang
+#
+##对象
+##student:
+##  name: qinjiang
+##  age: 3
+#
+#
+##行内写法
+#student: {name:qinjiang,age: 3}
+#
+##数组
+#pets:
+#  - cat
+#  - dog
+#  - ldh
+#
+##pets: [cat,dog,pig]
+
+#person:
+#  name: qinjiang${random.uuid}
+#  age: ${random.int}
+#  happy: false
+#  birth: 2019/11/02
+#  maps: {k1: v1,k2: v2}
+#  hello: haayy
+#  lists:
+#    - code
+#    - music
+#    - girl
+#  dog:
+#    name: ${person.hello:hello}_旺财
+#    age: 3
+#
+#dog:
+#  first-name: 阿黄
+#  age: 3
+#
+#server:
+#  port: 8081
+#spring:
+#  profiles:
+#    active: test
+#
+#
+#---
+#server:
+#  port: 8082
+#spring:
+#  profiles: dev
+#
+#---
+#server:
+#  port: 8083
+#
+#spring:
+#  profiles: test
+
+#配置文件到底能做什么？ --联系 -- 和spring.factories;
+
+#在配置文件中能配置的东西，都存在一个固有的规律  xxxAutoConfiguration xxxProperties 配置文件绑定，我们就可以使用自定义的配置
+#server:
+#  port:
+
+
+#debug=true来查看，哪些自动配置类生效，哪些没有生效
+debug: true
+
