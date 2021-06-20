@@ -2,6 +2,7 @@ package com.springboot03web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -16,11 +17,16 @@ import java.util.Locale;
 @Configuration
 //@EnableWebMvc  //这玩意就是导入了一个类：DelegatingWebMvcConfiguration：从容器中获取所有的webMvcconfig：自动注解失效
 public class MyMvcConfig implements WebMvcConfigurer {
-
-    //视图跳转
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/kuang").setViewName("test");
+        registry.addViewController("/").setViewName("index");
+//        registry.addViewController("/index.html").setViewName("index");
+    }
+
+    //自定义的国际化组件生效
+    @Bean
+    public LocaleResolver localeResolver(){
+        return new MyLocaleResolver();
     }
 }
 
