@@ -4,6 +4,7 @@ package com.springboot03web.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -18,6 +19,8 @@ public class Employee {
     private Integer gender; //0 女  1 男
 
     private Department department;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birth;
 
     public Employee(Integer id, String lastName, String email, Integer gender, Department department) {
