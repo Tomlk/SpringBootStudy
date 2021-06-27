@@ -1,0 +1,10 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï÷¤ÿÿÿÿÿ
+{
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "list_map".(ï÷¤ÿÿÿÿÿ
+k
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.PostMapping'.(äƒà°ùÿÿÿÿ
+a
+java:S1128"FRemove this unused import 'org.springframework.stereotype.Controller'.(øŠ—Öùÿÿÿÿ
+\
+java:S4143*"FVerify this is the index that was intended; it was already set before.(ÿÜÊÕ
