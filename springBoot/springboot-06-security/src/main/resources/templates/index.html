@@ -22,7 +22,7 @@
             <div class="right menu">
                 <!--如果未登录-->
                 <div sec:authorize="!isAuthenticated()">
-                    <a class="item" th:href="@{/login}">
+                    <a class="item" th:href="@{/toLogin}">
                         <i class="address card login"></i>登录
                     </a>
                 </div>
