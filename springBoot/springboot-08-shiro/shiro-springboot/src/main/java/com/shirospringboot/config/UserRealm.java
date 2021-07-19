@@ -5,6 +5,7 @@ import com.shirospringboot.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
@@ -19,7 +20,17 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         System.out.println("执行了=>授权doGetAuthorizationInfo");
-        return null;
+
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+
+        //拿到当前登录用的对象
+
+        Subject subject = SecurityUtils.getSubject();
+        User currentUser = (User) subject.getPrincipal(); //拿到User对象
+
+        info.addStringPermission(currentUser.getPerms());
+
+        return info;
     }
 
     //认证
@@ -37,6 +48,6 @@ public class UserRealm extends AuthorizingRealm {
         }
         //Md5 加密 不可逆
 
-        return new SimpleAuthenticationInfo("",user.getPwd(),"");
+        return new SimpleAuthenticationInfo(user,user.getPwd(),"");
     }
 }

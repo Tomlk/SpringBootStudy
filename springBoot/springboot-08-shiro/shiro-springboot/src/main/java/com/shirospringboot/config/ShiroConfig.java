@@ -30,12 +30,21 @@ public class ShiroConfig {
 
         Map<String, String> filterMap=new LinkedHashMap<>();
 
-        filterMap.put("/user/add","anon"); //无需认证
+        //权限
+        filterMap.put("/user/add","perms[user:add]");
+        //权限
+        filterMap.put("/user/update","perms[user:update]");
+
+        filterMap.put("/user/*","anon"); //无需认证
+
         filterMap.put("/user/update","authc"); //需要认证
         bean.setFilterChainDefinitionMap(filterMap);
 
         //设置登录的请求
         bean.setLoginUrl("/toLogin");
+
+        //未授权页面
+        bean.setUnauthorizedUrl("/noauth");
 
         return bean;
 
