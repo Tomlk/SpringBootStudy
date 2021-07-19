@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d75deb1-1387-411b-8ade-99732f0333eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shiro-springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/config/ShiroConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/config/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/config/UserRealm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/controller/MyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shiro-springboot/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626224178764</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="shiro 授权实现">
+      <created>1626700488191</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626700488191</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,19 +196,20 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="shiro quickstart" />
     <MESSAGE value="shiro 登录拦截、实现用户认证" />
-    <option name="LAST_COMMIT_MESSAGE" value="shiro 登录拦截、实现用户认证" />
+    <MESSAGE value="shiro 授权实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="shiro 授权实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/controller/MyController.java</url>
-          <line>42</line>
+          <line>43</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/shiro-springboot/src/main/java/com/shirospringboot/config/ShiroConfig.java</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

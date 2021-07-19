@@ -7,6 +7,7 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,10 @@ public class UserRealm extends AuthorizingRealm {
         if(user==null){//没有这个人
             return null;
         }
+
+        Subject subject = SecurityUtils.getSubject();
+        Session session = subject.getSession();
+        session.setAttribute("loginUser",user);
         //Md5 加密 不可逆
 
         return new SimpleAuthenticationInfo(user,user.getPwd(),"");

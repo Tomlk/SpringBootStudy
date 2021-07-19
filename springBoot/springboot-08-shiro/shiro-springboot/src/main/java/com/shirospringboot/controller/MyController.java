@@ -2,6 +2,7 @@ package com.shirospringboot.controller;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,6 +43,9 @@ public class MyController {
             //封装用户的登录数据
             UsernamePasswordToken token = new UsernamePasswordToken(username, password);
             subject.login(token);//执行登录操作,如果没有一次则ok了
+
+
+
             return "index";
         }  catch (UnknownAccountException uae) {
             model.addAttribute("msg","用户名错误");
